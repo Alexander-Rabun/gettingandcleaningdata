@@ -117,7 +117,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Code Book for Getting and Cleaning Data Project</h1>
 <h4 class="author"><em>Donald Chambless</em></h4>
-<h4 class="date"><em>November 7, 2016</em></h4>
+<h4 class="date"><em>November 2016</em></h4>
 
 </div>
 
@@ -742,7 +742,7 @@ $(document).ready(function () {
 <li><p>Then we subsetted out the features of interest from the dataframe “features”, namely, those with “mean()” or “std()” or “meanFreq()” embedded in the name–to produce the dataframe “relevant.features”</p></li>
 <li><p>We next inserted the relevant activity names (WALKING“,”WALKING_UPSTAIRS“,”WALKING_DOWNSTAIRS“,”SITTING“,”STANDING&quot; and “LAYING”) into the “ytrain” and “ytest” dataframes and named the field “activity”. We also used cbind() to add the subject IDs and activity names to the dataframes “xtrain” and “xtest”</p></li>
 <li><p>We then used rbind() to combine “xtrain” and “xtest” to produce the dataframe “all.results” and removed all variables not related to “mean()” or “std()” using the grepl-produced “Index” to yield the dataframe “relevant.results”. Next we applied the correct feature names to the variables in “relevant.results”. “relevant.results” is the first of the two dataframes required in this project</p></li>
-<li><p>Finally, we used the aggregate() function to produce the dataframe “tidy.summary” that gives the means of all the relevant variables by subject and activity combination. “tidy.summary” is the second of the two dataframes required in this project.</p></li>
+<li><p>Finally, we used the aggregate() function to produce the dataframe “tidy.summary” that gives the means of all the relevant variables by subject and activity combination. “tidy.summary” is the second of the two dataframes required in this project; we created “tidy.summary.txt” which is a text version of this data.frame with tab delimiters using the write.table() function.</p></li>
 </ul>
 </div>
 

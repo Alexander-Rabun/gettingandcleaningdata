@@ -1,7 +1,7 @@
 ---
 title: "Code Book for Getting and Cleaning Data Project"
 author: "Donald Chambless"
-date: "November 7, 2016"
+date: "November 2016"
 output: html_document
 ---
 General Information Concerning the Data Collected
@@ -1237,4 +1237,4 @@ Variables Introduced in the Course of Data Processing
 
 * We then used rbind() to combine "xtrain" and "xtest" to produce the dataframe "all.results" and removed all variables not related to "mean()" or "std()" using the grepl-produced "Index" to yield the dataframe "relevant.results".  Next we applied the correct feature names to the variables in "relevant.results".  "relevant.results" is the first of the two dataframes required in this project
 
-* Finally, we used the aggregate() function to produce the dataframe "tidy.summary" that gives the means of all the relevant variables by subject and activity combination. "tidy.summary" is the second of the two dataframes required in this project.
+* Finally, we used the aggregate() function to produce the dataframe "tidy.summary" that gives the means of all the relevant variables by subject and activity combination. "tidy.summary" is the second of the two dataframes required in this project; we created "tidy.summary.txt" which is a text version of this data.frame with tab delimiters using the write.table() function.

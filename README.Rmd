@@ -1,3 +1,11 @@
+---
+title: "README.Rmd file for Getting and Cleaning Data Project"
+author: "Donald Chambless"
+date: "November 2016"
+output: html_document
+---
+
+
 General Information Concerning the Project Objectives
 =====================================================
 
@@ -29,11 +37,11 @@ The review criteria were:
 In conducting this project, the following assumptions were made by the author:
 ==============================================================================
 
-a)	The measurements that are of interest are those for which the character strings "mean()" or "std()" or "meanFreq()" are embedded in the measurement names in  the features.txt file.  In the case of "meanFreq()" it is not completely clear whether these measurements are of interest: **it was the author’s judgment that these "meanFreq()" measurements were also to be included in the submitted dataset.**
+a)	The measurements that are of interest are those for which the character strings "mean()" or "std()" or "meanFreq()" are embedded in the measurement names in  the features.txt file.  In the case of "meanFreq()" it is not completely clear whether these measurements are of interest: **it was the author's judgment that these "meanFreq()" measurements were also to be included in the submitted dataset.**
 
 b)	There were 30 subjects involved in this study.  **It was the author's judgement that the subject number should be included in the submitted datasets.**
 
-c)	There were six different types of physical activity involved.  **It was the author’s judgment that the descriptive labels for these activities should be included in the submitted datasets.**
+c)	There were six different types of physical activity involved.  **It was the author's judgment that the descriptive labels for these activities should be included in the submitted datasets.**
 
 
 Description of the analysis:
@@ -47,4 +55,4 @@ Description of the analysis:
 
 * We then used rbind() to combine "xtrain" and "xtest" to produce the dataframe "all.results" and removed all variables not related to "mean()" or "std()" using the grepl-produced "Index" to yield the dataframe "relevant.results".  Next we applied the correct feature names to the variables in "relevant.results".  "relevant.results" is the first of the two dataframes required in this project
 
-* Finally, we used the aggregate() function to produce the dataframe "tidy.summary" that gives the means of all the relevant variables by subject and activity combination. "tidy.summary" is the second of the two dataframes required in this project.
+* Finally, we used the aggregate() function to produce the dataframe "tidy.summary" that gives the means of all the relevant variables by subject and activity combination. "tidy.summary" is the second of the two dataframes required in this project; we created "tidy.summary.txt" which is a text version of this data.frame with tab delimiters using the write.table() function.

@@ -60,3 +60,8 @@ tidy.summary <- aggregate(relevant.results[3:81], by = list(relevant.results$sub
 ## Rename the generically-named columns added by aggregate:
 names(tidy.summary)[1:2] <- c("subject", "activity")
 # "tidy.summary" is the second of the two dataframes required in this project.
+# Write this as the text file required for submission in tab-delimited form:
+write.table(tidy.summary, "tidy.summary.txt", sep = "\t", row.name=FALSE)
+
+
+
